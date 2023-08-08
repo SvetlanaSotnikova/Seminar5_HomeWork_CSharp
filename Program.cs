@@ -200,7 +200,7 @@ double GetMinMax(double[] arr)
         Console.Write($"{max} - ({min}) = ");
     else
         Console.Write($"{max} - {min} = ");
-
+    Console.Write($"{max} - {(min < 0 ? $"({min})" : $"{min}")} = ");
     return max - min;
 }
 
