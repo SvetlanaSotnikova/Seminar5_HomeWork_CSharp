@@ -139,12 +139,11 @@ int GetIndex(int[] arr)
     int sum = 0;
        for (int i = 0; i < arr.Length; i++)
     {
-        if (i % 2 != 0)
-        {
-            sum+=arr[i];
-        }
+        if (i % 2 != 0) sum+=arr[i];
         //i+=2 :D
         //sum+=arr[i] :D
+
+        // sum = i % 2 == 0 ? sum + i : sum; // вы не против если я в будущем на тернарные перейду, или это не совсем рентабильно?
     }
     return sum;
 }
