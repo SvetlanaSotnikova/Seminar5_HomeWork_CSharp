@@ -191,16 +191,14 @@ double GetMinMax(double[] arr)
 
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] > max)
-            max = arr[i];
-        else if (arr[i] < min)
-            min = arr[i];
+        if (arr[i] > max) max = arr[i];
+        else if (arr[i] < min) min = arr[i];
+
+        // max = arr[i] > max ? arr[i] : max;
+        // min = arr[i] < min ? arr[i] : min;
     }
-    if (min < 0)
-        Console.Write($"{max} - ({min}) = ");
-    else
-        Console.Write($"{max} - {min} = ");
     Console.Write($"{max} - {(min < 0 ? $"({min})" : $"{min}")} = ");
+    
     return max - min;
 }
 
